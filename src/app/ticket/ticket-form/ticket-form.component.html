@@ -1,0 +1,40 @@
+<div class="container">
+<form [formGroup]="ticketForm" (ngSubmit)="onSubmit()" *ngIf="!isLoading">
+  <fieldset class="row">
+    <legend class="h2 col-xs-12">Ihre Daten zum Ticket</legend>
+  <div class="col-xs-12 col-sm-6 form-group" >
+    <label for="title">Title</label>
+    <input
+      formControlName="title"
+      id="title"
+      class="form-control"
+      name="title"
+      type="text">
+  </div>
+  <div class="col-xs-12 col-sm-6 form-group" >
+    <label for="products">Produkte</label>
+    <select
+      formControlName="products"
+      id="products"
+      class="form-control"
+      name="products">
+      <option *ngFor="let option of productOptions" [value]="option.name">
+        {{option.desription}}
+      </option>
+    </select>
+  </div>
+  <div class="col-xs-12 form-group" >
+    <label for="desc">Beschreibung</label>
+    <textarea
+      formControlName="desc"
+      id="desc"
+      class="form-control"
+      name="desc"
+    ></textarea>
+  </div>
+  </fieldset>
+  <button [disabled]="!ticketForm.valid" type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+</div>
+<div *ngIf="isLoading">...loading</div>
