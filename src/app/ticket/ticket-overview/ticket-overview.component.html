@@ -1,1 +1,7 @@
-<p>ticket-overview works!</p>
+<ul class="list-group">
+  <li class="list-group-item flex flex--justify-between" *ngFor="let ticket of ticketOverView">
+    <div>{{ticket.title}}</div>
+    <div>{{ticket.products}}</div>
+    <div>{{ticket.desc}}</div>
+  </li>
+</ul>

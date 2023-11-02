@@ -16,5 +16,8 @@ export class TicketComponent implements OnInit{
     this.userService.setUser('1').subscribe((res) => {
       console.info('result', res)
     })
+
+
+
   }
 }

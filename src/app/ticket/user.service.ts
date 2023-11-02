@@ -27,6 +27,24 @@ export class UserService {
       })
     )
   }
+  public addNewTicket() {
+    const url = 'newTicket'
+
+
+    return this.http.post<any>(
+      url,
+      {
+        id: 12345
+      }
+    ).pipe(
+      catchError(this.handleErrorResponse),
+      tap((resp) => {
+        this.handleAuthentication(
+          resp
+        )
+      })
+    )
+  }
   handleErrorResponse(errorRes: HttpErrorResponse) {
     let errorMessage = 'An unknown error occurred!';
     return throwError(() => new Error(errorMessage))
