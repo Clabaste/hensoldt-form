@@ -11,12 +11,7 @@ export class TicketComponent implements OnInit{
     private userService: UserService,
   ) {
   }
-  onAddTicket() {
-    /*this.userService.user.subscribe((user) => {
-      console.info('onAddTicket', user)
-    })*/
 
-  }
   ngOnInit() {
     this.userService.setUser('1').subscribe((res) => {
       console.info('result', res)

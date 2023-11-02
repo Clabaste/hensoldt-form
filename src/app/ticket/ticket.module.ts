@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
-import { TicketComponent } from './ticket/ticket.component';
+import { TicketComponent } from './ticket.component';
 import {CommonModule} from "@angular/common";
 import {TicketRoutingModule} from "./ticket-routing.module";
-import { TicketFormComponent } from './ticket/ticket-form/ticket-form.component';
-import { TicketOverviewComponent } from './ticket/ticket-overview/ticket-overview.component';
+import { TicketFormComponent } from './ticket-form/ticket-form.component';
+import { TicketOverviewComponent } from './ticket-overview/ticket-overview.component';
 import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
